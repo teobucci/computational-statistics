@@ -180,8 +180,6 @@ def createLegends():
     legend_rates[16] = "d/dt Ca_rel in component intracellular_ion_concentrations (millimolar)"
     return (legend_states, legend_algebraic, legend_voi, legend_constants)
 
-
-
 def initConsts():
     constants = [0.0] * sizeConstants; states = [0.0] * sizeStates;
     states[0] = -81.18
@@ -255,11 +253,6 @@ def initConsts():
     constants[47] = 0.00480000*constants[42]
     constants[48] = 0.0552000*constants[42]
     return (states, constants)
-
-
-
-
-
 
 def computeRates(voi, states, constants):
     rates = [0.0] * sizeStates; algebraic = [0.0] * sizeAlgebraic
@@ -443,9 +436,6 @@ def custom_piecewise(cases):
     """Compute result of a piecewise function"""
     return select(cases[0::2],cases[1::2])
 
-
-
-
 def solve_model():
     """Solve model with ODE solver"""
     from scipy.integrate import ode
@@ -474,16 +464,6 @@ def solve_model():
     # Compute algebraic variables
     algebraic = computeAlgebraic(constants, states, voi)
     return (voi, states, algebraic)
-
-
-
-
-
-
-
-
-
-
 
 def plot_model(voi, states, algebraic):
     """Plot variables against variable of integration"""

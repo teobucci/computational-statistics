@@ -1,8 +1,6 @@
 <!-- omit from toc -->
 # The price of uncertainty during COVID-19
 
-![GitHub last commit](https://img.shields.io/github/last-commit/teobucci/computational-statistics?logo=github)
-
 A sensitivity analysis on an extended infection model using [UQpy](https://github.com/SURGroup/UQpy/).
 
 This project was developed for the course of **Computational Statistics** for the MSc. in Mathematical Engineering at Politecnico di Milano, A.Y. 2022/2023.
@@ -11,8 +9,6 @@ This project was developed for the course of **Computational Statistics** for th
 # Table of contents
 
 - [Installation](#installation)
-  - [How to clone the repository](#how-to-clone-the-repository)
-  - [How to install the packages](#how-to-install-the-packages)
 - [Analysis](#analysis)
 - [Final results](#final-results)
 - [Authors](#authors)
@@ -20,13 +16,11 @@ This project was developed for the course of **Computational Statistics** for th
 
 # Installation
 
-## How to clone the repository
+Clone the repository
 
 ```
 git clone https://github.com/teobucci/computational-statistics
 ```
-
-## How to install the packages
 
 Install the required packages using, for example, pip
 

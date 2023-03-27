@@ -38,8 +38,8 @@ pip install -r requirements.txt
 
 The repository contains different folders, which are explained here. The main files are:
 
-- `[main.ipynb](./main.ipynb)` is the main Jupyter Notebook for the project, which contains all the analysis and is completely independent.
-- `[local_extSIR.py](./local_extSIR.py)` is the mathematical implementation of the Extended SIR model used for this project.
+- [`main.ipynb`](./main.ipynb) is the main Jupyter Notebook for the project, which contains all the analysis and is completely independent.
+- [`local_extSIR.py`](./local_extSIR.py) is the mathematical implementation of the Extended SIR model used for this project.
 
 Other directories and files are:
 
@@ -51,9 +51,9 @@ Other directories and files are:
 
 # Final results
 
-An exported PDF version of `[main.ipynb](./main.ipynb)` can be found here: `[main.pdf](./output/main.pdf)`
+An exported PDF version of [`main.ipynb`](./main.ipynb) can be found here: [`main.pdf`](./output/main.pdf).
 
-The final presentation can be found here: `[comp_stat_bucci_petruso.pdf](./output/comp_stat_bucci_petruso.pdf)`.
+The final presentation can be found here: [`comp_stat_bucci_petruso.pdf`](./output/comp_stat_bucci_petruso.pdf).
 
 # Authors
 

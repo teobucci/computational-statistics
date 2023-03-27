@@ -18,7 +18,7 @@ def solveSEIR_UQpy(input_parameters):
         dRdt = lam*Q
         dDdt = kappa*Q
         dPdt = alpha*S
-        R0t = (1 + (np.log(I+Q/t)*gamma_inv)) * (1 + (np.log(I+Q/t)/lam))
+        R0t = (1 + (np.log((I)/t)*gamma_inv)) * (1 + (np.log((I)/t)/lam))
 
         
         return dSdt, dEdt, dIdt, dQdt, dRdt, dDdt, dPdt, R0t
@@ -32,6 +32,7 @@ def solveSEIR_UQpy(input_parameters):
     D0 = 0
     P0 = 0
     R0t0=5744
+    
   #  C0=I0
     #??? INITIAL CONDITION FOR RHO0 - but it does not matter actually
 
@@ -72,7 +73,7 @@ def solveSEIR(input_parameters):
         dRdt = lam*Q
         dDdt = kappa*Q
         dPdt = alpha*S
-        R0t = (1 + (np.log((I+Q)/t)*gamma_inv)) * (1 + (np.log((I+Q)/t)/lam))
+        R0t = (1 + (np.log((I)/t)*gamma_inv)) * (1 + (np.log((I)/t)/lam))
         
         return dSdt, dEdt, dIdt, dQdt, dRdt, dDdt, dPdt, R0t
 
@@ -103,3 +104,5 @@ def solveSEIR(input_parameters):
                  args=(N, alpha, beta, gamma_inv, delta_inv, lam, kappa))
 
     return sol.T
+
+

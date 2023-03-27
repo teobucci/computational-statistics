@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 
 #MODIFIED VERSION WITH ONE OUTPUT
 
-def solveSEIR_UQpy(input_parameters):
+def solve_extSIR_UQpy(input_parameters):
     
     # for odeint
-    def seir_model(y, t, N, alpha, beta, gamma_inv, delta_inv, lam, kappa):
+    def ext_sir_model(y, t, N, alpha, beta, gamma_inv, delta_inv, lam, kappa):
         S, E, I, Q, R, D, P, R0 = y #C are the cumulative cases
         dSdt = -beta*S*I/N - alpha*S
         dEdt = beta*S*I/N - 1/gamma_inv*E
@@ -31,7 +31,7 @@ def solveSEIR_UQpy(input_parameters):
     R0 = 0
     D0 = 0
     P0 = 0
-    R0t0=5744
+    R0t0 = 5744
     
   #  C0=I0
     #??? INITIAL CONDITION FOR RHO0 - but it does not matter actually
@@ -44,11 +44,11 @@ def solveSEIR_UQpy(input_parameters):
 
 
     # Set time discretization as in the paper
-    t = np.linspace(1e-1, 180, 10000) #aggiornata partendo da t
+    t = np.linspace(1e-1, 180, 10000) # aggiornata partendo da t
 
     # Solve system of differential equations
     # Returns the seven variables S, E, I, Q, R, D, and P at each time point AND RHO 0
-    sol = odeint(func=seir_model,
+    sol = odeint(func=ext_sir_model,
                  y0=[S0, E0, I0, Q0, R0, D0, P0, R0t0],
                  t=t,
                  args=(N, alpha, beta, gamma_inv, delta_inv, lam, kappa))
@@ -61,10 +61,10 @@ def solveSEIR_UQpy(input_parameters):
 
 
 
-def solveSEIR(input_parameters):
+def solve_extSIR(input_parameters):
 
     # for odeint
-    def seir_model(y, t, N, alpha, beta, gamma_inv, delta_inv, lam, kappa):
+    def ext_sir_model(y, t, N, alpha, beta, gamma_inv, delta_inv, lam, kappa):
         S, E, I, Q, R, D, P, R0 = y
         dSdt = -beta*S*I/N - alpha*S
         dEdt = beta*S*I/N - 1/gamma_inv*E
@@ -98,7 +98,7 @@ def solveSEIR(input_parameters):
 
     # Solve system of differential equations
     # Returns the seven variables S, E, I, Q, R, D, and P at each time point
-    sol = odeint(func=seir_model,
+    sol = odeint(func=ext_sir_model,
                  y0=[S0, E0, I0, Q0, R0, D0, P0, R0t0],
                  t=t,
                  args=(N, alpha, beta, gamma_inv, delta_inv, lam, kappa))

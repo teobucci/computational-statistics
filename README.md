@@ -43,11 +43,11 @@ The repository contains different folders, which are explained here. The main fi
 
 Other directories and files are:
 
-- `UQpy` is a folder which contains some helpful material for getting started with `UQpy`.
+- `UQpy` is a folder which contains some helpful material for getting started with UQpy.
 - `Uncertainpy` is a folder which contains old and failed experiments using [Uncertainpy](https://github.com/simetenn/uncertainpy/), indeed this project initially aimed at using such library.
 - `docs` is a folder which contains the paper used in this project.
 - `figures` is a folder which contains images embedded in the Jupyter Notebook.
-- `physics_models` is a folder which contains Jupyter Notebooks of simple physics model to be using for experimenting with `UQpy`.
+- `physics_models` is a folder which contains Jupyter Notebooks of simple physics model to be using for experimenting with UQpy.
 
 # Final results
 
